@@ -1,4 +1,4 @@
 FROM openjdk:11
-COPY $(Build.BuildId) /usr/src/myapp
+COPY /home/vsts/work/1/s/target/Calculator-1.0-SNAPSHOT.jar /usr/src/myapp
 WORKDIR /usr/src/myapp
-CMD [ java -jar $(Build.BuildId).jar]
+CMD [ java -jar /home/vsts/work/1/s/target/Calculator-1.0-SNAPSHOT.jar]
