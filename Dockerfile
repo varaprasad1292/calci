@@ -1,4 +1,4 @@
 FROM openjdk:11
-COPY *.jar /usr/src/myapp
+COPY $(Build.BuildId) /usr/src/myapp
 WORKDIR /usr/src/myapp
-CMD [ java -jar *.jar]
+CMD [ java -jar $(Build.BuildId).jar]
